@@ -1,0 +1,114 @@
+/***********************************TAG selectors******************************/
+body {
+  background-image: url(photos/tile.jpg);
+  margin: 0;
+  font-family: Arimo, arial, sans-serif, helvetica;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: Mansalva;
+  position: relative;
+  top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  font-weight: bolder;
+  text-align: center;
+}
+
+label.badge.badge-success {
+  color: black;
+}
+
+/***********************************ID's selectors*****************************/
+#taskForm {
+  background-image: url(photos/formbg.jpg);
+}
+/***********************************CLASS selectors****************************/
+.container {
+  margin-top: 60px;
+}
+
+.delete-button,
+.clear-button,
+.add-button {
+  margin-left: 30px;
+  position: relative;
+  top: 27px;
+}
+
+.add-button {
+  margin-left: 30px;
+  position: relative;
+  top: 10px;
+}
+
+/* the entrance effect of the note on screen */
+.fade-in {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.timeArea {
+  display: block;
+}
+
+.dateAndTimeArea {
+  position: relative;
+  top: 65px;
+  left: 15px;
+}
+
+.deleteNotea-style {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 142px;
+}
+
+.paragraphDiv-style {
+  height: 100px;
+  width: 150px;
+  word-wrap: break-word;
+  position: relative;
+  top: 66px;
+  left: 12px;
+}
+
+.div-style {
+  background-image: url('photos/notebg.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 220px;
+  width: 180px;
+  margin: 3px;
+}
+
+.boardPlace {
+  margin: 20px 275px 15px 300px;
+}
+
+/*******************************CSS SCROLLER***********************************************/
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #cccccc;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1a0000;
+}
