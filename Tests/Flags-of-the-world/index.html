@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <title>flags test</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/sign-in/" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/minty/bootstrap.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="text-center">
+  <div class="container">
+    <form class="form-signin">
+      <input type="text" id="nameInput" class="form-control mb-3" placeholder="Enter Flag Name" required autofocus />
+      <button class="btn btn-lg btn-primary btn-block" type="button" onclick="searchByName()">
+        Search
+      </button>
+      <button class="btn btn-lg btn-danger btn-block" type="button" onclick="showAllFlags()">
+        Show All Flags
+      </button>
+    </form>
+  </div>
+
+  <div class="container row mx-auto" id="flags-place"></div>
+
+  <script src="javascript.js" charset="utf-8"></script>
+</body>
+
+</html>

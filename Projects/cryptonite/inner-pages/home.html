@@ -1,0 +1,56 @@
+<!-- show all selected button , clear al selected button  -->
+<div id="coinsOptions">
+  <div class="text-center mb-4 mt-4 d-flex flex-column flex-md-row-reverse">
+    <button id="showSelectedCoins" onclick="showSelectedCoins()" class="btn btn-dark m-2" type="button">
+      Show All Selected Coins<i class="fas fa-binoculars fa-lg pl-3"></i>
+    </button>
+    <button class="btn btn-danger m-2" type="button" onclick="clearAllSelectedCoins()">
+      Clear All Selected Coins<i class="fas fa-broom fa-lg pl-3"></i>
+    </button>
+  </div>
+</div>
+
+
+
+
+<!-- place of all coins after draw them from api   -->
+<div class="container row mx-auto" id="coins-place"></div>
+
+
+<!-- pagination -->
+<ul class="pagination pagination-lg justify-content-center" id="paginateTheCoins" style="display: none;">
+  <li class="page-item">
+    <a class="page-link bg-dark text-white" id="previousBtn" href="#" onclick="previousPage()">&laquo;</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link bg-dark text-white" id="nextBtn" href="#" onclick="nextPage()">&raquo;</a>
+  </li>
+</ul>
+
+<!-- 5 coin alert Modal -->
+<div class="modal" id="coinsModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger">
+          Alert: You Can't Choose More Than 5 Coins
+        </h5>
+      </div>
+      <div class="modal-body">
+        <p class="text-primary">
+          you can choose to toggle at least one of the switches and then click
+          'save changes', or click cancel!
+        </p>
+        <ul id="modalSwitches" class="list-group list-group-flush"></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="modalCancelBtn(5)" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" onclick="modalSaveChanges()">
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

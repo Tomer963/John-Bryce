@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=Adamina|Playfair+Display:900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap, bootswatch, CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/9b85a3b7c6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/loader.css" />
+
+
+  <title>Cryptonite Project</title>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="jumbotron mb-0 heading rounded-0">
+    <div class="container">
+      <h1 class="pt-3">
+        <em>Cryptonite <br>
+          <small class="lead text-white">All Coins , One Place!</small></em>
+      </h1>
+    </div>
+  </header>
+
+  <!-- navbar with search option -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"><i class="fab fa-bitcoin fa-lg mr-2"></i>Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="pills-tab">
+        <li class="nav-item homeNavItem">
+          <a class="nav-link" href="#" onclick="htmlPage('home.html')">Home</a>
+        </li>
+        <li class="nav-item liveReportsNavItem">
+          <a class="nav-link" href="#" onclick="htmlPage('liveReports.html')">Live Reports</a>
+        </li>
+        <li class="nav-item aboutNavItem">
+          <a class="nav-link" href="#" onclick="htmlPage('about.html')">About</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search by Coin Symbol" />
+        <button id="searchForCoin" class="btn btn-success my-2 my-sm-0" type="submit">
+          Search<i class="fas fa-search ml-2"></i>
+        </button>
+      </form>
+    </div>
+  </nav>
+
+
+  <!-- MAIN LOADER -->
+  <div id="loaderfirstApi" class="loader" style="display: none;font-size: 4rem;text-align: center;">
+    Loading
+  </div>
+
+
+  <!-- content container olace for each html page -->
+  <div class="container my-5 row mx-auto justify-content-center" id="inner-content">
+    <div id="home-content"></div>
+    <div id="live-report-content"></div>
+    <div id="about-content"></div>
+  </div>
+
+
+  <!-- parallax scrolling -->
+  <section class="parallax1"></section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="bg-dark">
+    <div class="social-menu text-center mb-0">
+      <ul class="justify-content-center mb-0">
+        <li>
+          <a href="https://he-il.facebook.com/"><i class="fa fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/explore"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="container text-warning">
+      <div>
+        <p class="lead text-center">
+          JOIN OUR NEWSLETTER FOR DEALS AND UPDATES
+        </p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+          <form action="" class="form-inline">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Your Email" />
+              <div class="input-group-append">
+                <button class="btn btn-primary disabled">Join Now</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copy-right-position">
+      <small class="text-muted">
+        Copyright &copy;
+        <span id="year"></span>
+        Tomer Dore
+      </small>
+    </div>
+  </footer>
+
+
+
+  <!-- google jquery CDN ,axios, JavaScript,canvas js chart  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./js/main.js" charset="utf-8"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script src="./js/liveReports.js" charset="utf-8"></script>
+
+  <!-- Popper.js, Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+</body>
+
+</html>
